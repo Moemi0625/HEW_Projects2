@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <title>Portfolio'23</title>
+    <!-- <script defer src="script.js"></script> -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" sizes="200x200" href="./images/favicon.png">
+    <script defer src="script.js"></script>
+</head>
+<body  id="projectsPage">
+    <div class="loader-wrapper"></div> 
+      <button onclick="scrollToTop()" class="back-to-top">Back to Top</button>
+       <button id="imageButton">Hello World</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var imageContainer = document.body;
+      var currentBackground = 1;
+
+      document.getElementById('imageButton').addEventListener('click', function() {
+        currentBackground = (currentBackground % 7) + 1; // Cycle through backgrounds 1 to 5
+        imageContainer.style.background = `url('./images/background${currentBackground}.jpg') no-repeat center center fixed`;
+        imageContainer.style.backgroundSize = 'cover';
+      });
+    });
+  </script>
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="alienCheck.jsp" class=>Back to Space</a></li>
+                <li><a href="top.html">Top contents</a></li>
+                 <li><a href="game/game.html">Mission Game</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <h1>My Projects</h1>
+    
+    <section class="overlay">
+    <div class="pro-top" style="display: flex; margin: 20px;">
+        <div>
+			 <h2 style="width:100%;">HAL EVENT WEEK <br> Main Project</h2>
+            <h4 style="text-align:left; margin-left:20px;">[ Manhwa to Match]</h4>
+            
+            <p style="margin-left:20px;">Korean webtoon overview site with SNS functions</p><br>
+             <a href="./_ManhwaToMatch_SD16/index.html" class="btn" target="_blank">Go to web site</a>
+                 <a href="./projects/project1.pdf" target="_blank" class="btn">overview</a>
+                <p style="margin-left:20px; margin-top:10px;">#Java #Spring Boot</p>
+                
+                 
+            </div>
+             <img src="./images/project1.png" style="width: 55%; height: 260px; padding-top:50px;" alt="Project 1">
+        </div>
+    </section>
+
+    <section class="overlay">
+<div class="pro-top" style="display: flex; margin: 20px;">
+        <video src="./projects/project5.mp4" autoplay muted loop style="width: 60%; height: 300px;" >
+        </video>
+       <div>
+		    <h4>Portfolio Feature ①</h4>
+        <h3 style="text-align: center;">[ Space Animation ]</h3>
+        
+        <p>I created animation of Earth and Moon for the landing page.
+				<br> <br><a href="" class="s-c">My sorce code</a></p>
+        <p style="text-align:center;"> #Three.js #LandingPage</p>
+        </div>
+    </div>
+</section>
+
+<section class="overlay">
+    <div class="pro-top" style="display: flex; margin: 20px;">
+        <div>
+			 <h4>Portfolio Feature ②</h4>
+            <h3 style="text-align: center;">[ Memory Card Game ]</h3>
+            
+            <p>I created Card Game which provides user experience on the site.
+            <br><br> <a href="" class="s-c">My sorce code</a></p>
+                <p style="text-align:center;">#JavaScript #Translator API</p>
+            </div>
+            <video src="./projects/project7.mp4" autoplay muted loop style="width: 60%; height: 300px;" >
+            </video>
+        </div>
+    </section>
+
+
+    <section class="overlay">
+       <br><h2 style="margin-left:50px;">Other Projects</h2>
+     
+        <section class="projects enhypen">
+        
+            <div class="project-card enhypen-card">
+                <img src="./images/project2.png" alt="Project 2">
+                 <p class="h-b">Artist official site</p>
+                 <h3>[ ENHYPEN ]</h3>
+                <p class="p">Bronze award in HAL competition</p>
+                <a href="./_Artist-Enhypen_WB15/index.html" class="btn" target="_blank">Go to web site</a>
+                <a href="./projects/project2.pdf" target="_blank" class="btn">overview</a>
+            </div>
+       	</section>
+            
+       
+         <section class="projects">
+         
+             <div class="project-card">
+                <img src="./images/project3.png" alt="Project 3">
+                 <p class="h-b">Group chat application</p>
+                 <h3>[ Horizon ]</h3>
+                <p class="p">JavaScript external class project</p>
+                <a href="./_Horizon/login.html" class="btn" target="_blank">Go to web site</a>
+                <a href="./projects/project3.pdf" target="_blank" class="btn">overview</a>
+            </div>
+            
+             <div class="project-card">
+                <img src="./images/project4.png" alt="Project 4">
+                   <p class="h-b">Todolist web application</p>
+                   <h3>[ Todo List ]</h3>    
+                   <p class="p">Spring boot first project</p>
+               <a href="./_Todolist/login.html" class="btn" target="_blank">Go to web site</a>
+                <a href="./projects/project4.pdf" target="_blank" class="btn">overview</a>
+            </div>
+    
+        </section>
+    
+    </section>
+
+    
+    <div class="footer"></div>
+    <footer>
+        <p>&copy; 2023 Moemi</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="「ENHYPEN」 公式サイト">
+    <meta name="keywords" content="韓国アイドル, エンハイプン, エナイプン, HYBE">
+    <title>ENHYPEN</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--for SNS icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <!--for member gallery slides-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css"
+        integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA=="
+        crossorigin="anonymous">
+        <link rel="icon" href="favicon.ico">
+        <link rel="icon" sizes="200x200" href="./images/favicon.png">
+    
+</head>
+
+<!--fixed logo image on left side-->
+<div class="main-logo">
+    <div class="fade-text to-left" style="--duration: 2.4s; --delay: 0.8s; --ease: ease-out">
+    <img src ="./images/enlogo1.png"></div>
+</div>
+<div class="shutter-sub"></div>
+  
+<body>
+<div class ="main">
+    <!-- header section-->
+    <div class="header-member">
+        <nav class="navbar">
+            <h2 class="logo">ENHYPEN</h2>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="member.html"id="PageSign">MEMBERS</a></li>
+                <li><a href="discography.html">DISCOGRAPHY</a></li>
+                <li><a href="history.html">HISTORY</a></li>
+            </ul>
+        </nav>
+    </div>
+  
+    <!--animation for navigation bar-->
+    <script>
+      const menu = document.querySelector(".menu");
+      const navbar = document.querySelector(".navbar");
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset >= menu.offsetTop) {
+          //sticky class for navbar
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      });
+    </script>
+
+    <!-- introduction of profile -->
+    <div class="profile-body"> 
+        <h2>7 MEMBERS</h2>
+        <h1 class="title">PROFILE</h1>
+        <p class="member-top">
+            <a href="history.html#Debut0">韓国サバイバルオーディション番組「I-LAND」</a>で選出された7人のメンバーで<br>構成された「ENHYPEN」。
+            グループ名は記号の「ー」(ハイフン)のように<br>メンバー７人で団結し、音楽を通して人々や世界をつなげるという意味が<br>込められている。
+        </p>
+    </div>
+
+    <!-- main contents of profile -->
+    <div class="member">
+
+    <div class="jump" id="JW"></div>
+
+    <!--member profile-->
+    <article class="member-wrapper">
+        <div class="text-member">
+            <p class="title-member">JUNGWON</p>
+            <p class="secondtitle-member">ジョンウォン / 정원 </p>
+            <ul class="body-member">
+                <li>本名 : ヤン・ジョンウォン</li>
+                <li>誕生日 : 2004.02.09</li>
+                <li>出身地 : 韓国</li>
+                <li>血液型 : AB型</li>
+                <li>身長 : 174cm</li>
+            </ul>
+        </div>
+        <div class="img-member">
+            <img src="./images/JW2.jpg" alt="member1">
+        </div>
+    </article>
+
+    <div class="jump" id="HS"></div>
+
+    <!--member profile-->
+    <article class="member-wrapper">
+        <div class="text-member">
+            <p class="title-member">HEESEUNG</p>
+            <p class="secondtitle-member">ヒスン / 희승</p>
+            <ul class="body-member">
+                <li>本名 : イ・ヒスン </li>
+                <li>誕生日 : 2001.10.15</li>
+                <li>出身地 : 韓国</li>
+                <li>血液型 : A型</li>
+                <li>身長 : 182cm</li>
+            </ul>
+        </div>
+        <div class="img-member">
+            <img src="./images/HS2.jpg" alt="member2">
+        </div>
+    </article>
+
+    <div class="jump" id="J"></div>
+
+    <!--member profile-->
+    <article class="member-wrapper">
+        <div class="text-member">
+            <p class="title-member">JAY</p>
+            <p class="secondtitle-member">ジェイ / 제이</p>
+            <ul class="body-member">
+                <li>本名 : パク・ジョンソン(ジェイ)</li>
+                <li>誕生日 : 2002.4.20</li>
+                <li>出身地 : アメリカ</li>
+                <li>血液型 : B型</li>
+                <li>身長 : 178cm</li>
+            </ul>
+        </div>
+        <div class="img-member">
+            <img src="./images/J2.jpg" alt="member3">
+        </div>
+    </article>
+
+    <div class="jump" id="JK"></div>
+
+    <!--member profile-->
+    <article class="member-wrapper">
+        <div class="text-member">
+            <p class="title-member">JAKE</p>
+            <p class="secondtitle-member">ジェイク / 제이크</p>
+            <ul class="body-member">
+                <li>本名 : シム・ジェユン(ジェイク)</li>
+                <li>誕生日 : 2002.11.15</li>
+                <li>出身地 : オーストラリア</li>
+                <li>血液型 : O型</li>
+                <li>身長 : 175cm</li>
+            </ul>
+        </div>
+        <div class="img-member">
+            <img src="./images/JK2.jpg" alt="member4">
+        </div>
+    </article>
+
+    <div class="jump" id="SH"></div>
+
+    <!--member profile-->
+    <article class="member-wrapper">
+        <div class="text-member">
+            <p class="title-member">SUNGHOON</p>
+            <p class="secondtitle-member">ソンフン / 성훈</p>
+            <ul class="body-member">
+                <li>本名 : パク・ソンフン</li>
+                <li>誕生日 : 2002.12.8</li>
+                <li>出身地 : 韓国</li>
+                <li>血液型 : O型</li>
+                <li>身長 : 181cm</li>
+            </ul>
+        </div>
+        <div class="img-member">
+            <img src="images/SH2.jpg" alt="member5">
+        </div>
+    </article>
+
+    <div class="jump" id="SN"></div>
+
+    <!--member profile-->
+    <article class="member-wrapper">
+        <div class="text-member">
+            <p class="title-member">SUNOO</p>
+            <p class="secondtitle-member">ソヌ / 선우</p>
+            <ul class="body-member">
+                <li>本名 : キム・ソヌ</li>
+                <li>誕生日 : 2003.6.24</li>
+                <li> 出身地 : 韓国</li>
+                <li>血液型 : O型</li>
+                <li>身長 : 173cm</li>
+            </ul>
+        </div>
+        <div class="img-member">
+            <img src="images/SN2.jpg" alt="member6">
+        </div>
+    </article>
+
+    <div class="jump" id="NK"></div>
+
+    <!--member profile-->
+    <article class="member-wrapper">
+        <div class="text-member">
+            <p class="title-member">NI-KI</p>
+            <p class="secondtitle-member">ニキ / 니키 </p>
+            <ul class="body-member">
+                <li>本名 : 西村力</li>
+                <li>誕生日 : 2005.12.9</li>
+                <li>出身地 : 日本</li>
+                <li>血液型 : B型</li>
+                <li>身長 : 185cm</li>
+            </ul>
+        </div>
+        <div class="img-member">
+            <img src="images/NK2.jpg" alt="member7">
+        </div>
+    </article>
+
+    </div><!--member-wrapper-->
+
+    <!--group gallery section-->
+    <div class="GG" id="GG"></div>
+
+    <div class="GroupGallery">
+        <h1>GROUP GALLERY</h1>
+        <h2>ENHYPEN CONCEPT PHOTOS</h2>
+        
+        <a href="./images/Debut1.jpg" data-lightbox="7" data-title="[Border:Day One] コンセプトフォト (Dusk ver.) 2020.11">
+            <img src="./images/Debut1.jpg" alt="member gallery1" />
+        </a>
+
+        <a href="./images/gal2.jpg" data-lightbox="7" data-title="[Border: Day One] コンセプトフォト (DOWN ver.) 2020.11">
+            <img src="./images/gal2.jpg" alt="member gallery2" />
+        </a>
+
+        <a href="./images/gal3.jpg" data-lightbox="7" data-title="[Border:Carnival/Drunk-Dazed] コンセプトフォト 2021.04">
+            <img src="./images/gal3.jpg" alt="member gallery3" />
+        </a>
+
+        <a href="./images/gal4.jpg" data-lightbox="7" data-title="[Border:Carnival] コンセプトフォト 2021.04">
+            <img src="./images/gal4.jpg" alt="member gallery4" />
+        </a>
+
+        <a href="./images/gal5.jpeg" data-lightbox="7" data-title="[DIMENSION:DILEMMA] コンセプトフォト (ODYSSEUS ver.) 2021.10">
+            <img src="./images/gal5.jpeg" alt="member gallery5" />
+        </a>
+        
+        <a href="./images/gal6.jpg" data-lightbox="7" data-title="[DIMENSION:DILEMMA] コンセプトフォト (CHARYBDIS ver.) 2021.10">
+            <img src="./images/gal6.jpg" alt="member gallery6" />
+        </a>
+
+        <a href="./images/gal7.jpg" data-lightbox="7" data-title="[DARK BLOOD] コンセプトフォト (Full ver.) 2023.05">
+            <img src="./images/gal7.jpg" alt="member gallery7" />
+        </a>
+
+        <a href="./images/gal8.jpg" data-lightbox="7" data-title="[Dark Blood]Teaser コンセプトフォト(Half ver.) 2023.05">
+            <img src="./images/gal8.jpg" alt="member gallery8" />
+        </a>
+
+        <a href="./images/HomeTop.jpg" data-lightbox="7" data-title="[Dark Blood]Teaser コンセプトフォト(NEW ver.) 2023.05">
+            <img src="./images/HomeTop.jpg" alt="member gallery9" />
+        </a>
+
+
+    </div><!--GroupGallery-->
+
+    <!--script for gallery slides-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
+        integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ=="
+        crossorigin="anonymous"></script>
+    <script>
+        lightbox.option({
+            alwaysShowNavOnTouchDevices: true,
+            resizeDuration: 200,
+            wrapAround: true,
+        });
+    </script>
+
+    <!--footer section-->
+    <div class="footer-img">
+        <img src="./images/Footer.jpg" alt="footer image">
+      </div>
+      
+      <footer class="footer">
+    <!--footer SNS buttons section-->
+    <!--なぜかmember pageのボタンだけアニメーションが変。。。-->
+      <div class="footer-wrapper">
+  
+        <div class="button"><a href="https://www.youtube.com/c/ENHYPENOFFICIAL/videos"target="_blank">
+        <div class="icon"><i class="fab fa-youtube"></i></div>
+          <span>YouTube</span></a>
+        </div>
+  
+        <div class="button"><a href=" https://twitter.com/ENHYPEN_members"target="_blank">
+          <div class="icon"><i class="fab fa-twitter"></i></div>
+          <span>Twitter</span></a>
+        </div>
+  
+        <div class="button"><a href=" https://www.instagram.com/enhypen/"target="_blank">
+          <div class="icon"><i class="fab fa-instagram"></i></div>
+          <span>Instagram</span></a>
+        </div>
+  
+        <div class="button"><a href=" https://open.spotify.com/artist/5t5FqBwTcgKTaWmfEbwQY9" target="_blank">
+          <div class="icon"><i class="fab fa-spotify"></i></div>
+          <span>Spotify</span></a>
+        </div>
+  
+        <div class="button"><a href="https://www.tiktok.com/@enhypen"target="_blank">
+            <div class="icon"><i class="fab fa-tiktok"></i></div>
+            <span>TikTok</span></a>
+        </div>
+  
+        </div><!--footer wrapper-->
+  
+        <div class="copyright">
+          <p>© BELIFT LAB</p>
+        </div>
+  
+      </footer>
+  </body>
+</html>

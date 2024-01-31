@@ -1,0 +1,144 @@
+
+<!-- 同じヘッダーとナビゲーションバーを使用 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>Portfolio'23</title>
+    <script defer src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" sizes="200x200" href="./images/favicon.png">
+</head>
+
+<body  id="aboutPage">
+    <div class="loader-wrapper"></div> 
+      <button onclick="scrollToTop()" class="back-to-top">Back to Top</button>
+       <button id="imageButton">Hello World</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var imageContainer = document.body;
+      var currentBackground = 1;
+
+      document.getElementById('imageButton').addEventListener('click', function() {
+        currentBackground = (currentBackground % 7) + 1; // Cycle through backgrounds 1 to 5
+        imageContainer.style.background = `url('./images/background${currentBackground}.jpg') no-repeat center center fixed`;
+        imageContainer.style.backgroundSize = 'cover';
+      });
+    });
+  </script>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="alienCheck.jsp" class=>Back to Space</a></li>
+                <li><a href="top.html">Top contents</a></li>
+                 <li><a href="game/game.html">Mission Game</a></li>
+                <li><a href="about.html"  class="active">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>About Me</h1>
+
+    <section class="overlay">
+    <section class="about"><br>
+        <div class="me">
+        <img src="./images/me.jpg"><br><br>
+        <div>
+			
+		 <p style="margin:50px;
+    font-size: 28px;
+    margin-top: 60px;
+	font-weight: bolder;">
+            "Hello! <br>
+            I'm Moemi Akahori, <br>an IT student of HAL."</p>
+    
+		<!-- ダウンロードボタン -->
+		<button id="downloadButton" class="download-btn btn">
+			<ion-icon name="open-outline"></ion-icon>resume</button>
+		</div>
+		</div>
+       
+		<script>
+		document.getElementById('downloadButton').addEventListener('click', function() {
+		    // 履歴書のファイルを取得
+		    const imageUrl = 'images/resume.pdf'; // imagesフォルダにある場合の例
+		    fetch(imageUrl)
+		        .then(response => response.blob())
+		        .then(blob => {
+		            // Blobオブジェクトを作成し、ダウンロードリンクを生成
+		            const url = URL.createObjectURL(blob);
+		
+		            // ダウンロード用リンクを生成
+		            const downloadLink = document.createElement('a');
+		            downloadLink.href = url;
+		            downloadLink.download = 'resume.pdf'; // ファイル名に合わせて調整
+		
+		            // リンクをクリックしてダウンロードを開始し、リンクを削除
+		            document.body.appendChild(downloadLink);
+		            downloadLink.click();
+		            document.body.removeChild(downloadLink);
+		        });
+		});
+		</script>
+
+        <div class="about-box">
+        <h3>Academic <br>Background</h3>
+<ul>
+    <li>Mar 2020 
+        <p class="b-h">Graduated from <br>Seong Jung Junior High School (Seoul, Korea)</p></li>
+    <li>Oct 2022 
+        <p class="b-h">Completed high school program <br>at Canning College (WA, Australia)</p></li>
+    <li>Apr 2023 
+        <p class="b-h">Enrolled at Tokyo HAL, <br>Faculty of IT, Department of Information Processing</p></li>
+</ul>
+</div><br><br>
+
+        <p style="line-height: 30px;">
+            My tech journey started in high school in Australia, fueled by my love for <br>drawing and painting, 
+            my interest in programming language and IT expanded while mastering foreign languages like English and Korean.
+        </p><br><br>
+        <div class="about-box">
+        
+            <h3>My skills, <br>What I learned in 2023</h3>
+            <ul class="myskill" style="padding-left: 30px;">
+               
+                <li>HTML・CSS</li>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>Ruby</li>
+                <li>TypeScript</li>
+                <li>MySQL</li>
+            
+             </ul></div><br>
+       
+        <p style="line-height: 30px;">
+            I'm passionate about designing such as web development, 
+            <br>and intrigued by the possibilities of AI, which I explore using chatGPT in my programming journey recently.
+        </p><br><br><br>
+        <p>
+            Let's connect and create together! (Open to collaboration on any projects, lol)
+        </p><br><br>
+     
+    </section>
+    <!-- Additional content for the about page -->
+
+</section>
+   
+</body>
+<div class="footer"></div>
+<footer>
+    <p>&copy; 2023 Moemi</p>
+</footer>
+</html>
+
+
+
+

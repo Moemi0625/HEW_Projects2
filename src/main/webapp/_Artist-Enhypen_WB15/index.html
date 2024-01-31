@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="「ENHYPEN」 公式サイト">
+    <meta name="keywords" content="韓国アイドル, エンハイプン, エナイプン, HYBE">
+    <title>ENHYPEN</title>
+    <link href="css/style.css" rel="stylesheet">
+    <!--for SNS icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" sizes="200x200" href="./images/favicon.png">
+</head>
+
+<!--fixed logo image on left side-->
+<div class="main-logo">
+  <div class="fade-text to-left" style="--duration: 2.4s; --delay: 0.8s; --ease: ease-out">
+  <img src ="./images/enlogo1.png"></div>
+</div>
+<div class="shutter"></div>
+
+<body> 
+<!-- header -->
+  <div class="header-home">
+    <nav class="navbar">
+        <h2 class="logo">ENHYPEN</h2>
+          <ul class="menu">
+            <li><a href="index.html" id="PageSign">HOME</a></li>
+            <li><a href="member.html">MEMBERS</a></li>
+            <li><a href="discography.html">DISCOGRAPHY</a></li>
+            <li><a href="history.html">HISTORY</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!--animation for navigation bar-->
+  <script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        //sticky class for navbar
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+     });
+  </script>
+
+<!--news section-->
+<article class="main">
+  <section class="news">
+    <div class="news-text">
+      <h1>NEWS</h1>
+
+      <div class="news-wrapper">
+        <div class="list">           
+          <h3>2023.09.14 [イベント＆ライブ]</h3>
+            <div class="item">      
+              <div class="modal_open" data-modal-open="modal-1">
+                <p>「NHK MUSIC EXPO 2023」に出演決定！</p>
+              </div>
+                <!--news contents in modal-->
+                <div class="modal_wrapper" data-modal="modal-1"> 
+                    <div class="modal_window">
+                      <div class="modal_content">
+                        <h3>「NHK MUSIC EXPO 2023」に出演</h3>
+                        <p>9月14日(木)「NHK MUSIC EXPO 2023」の出演が決定いたしました！</p>
+                          <ul>
+                            <li>番組名：NHK総合「NHK MUSIC EXPO 2023」</li>
+                            <li>放送日時：9月14日(木)22:00〜22:45</li>
+                            <li>再放送：9月18日(月)23:50～24:35</li>
+                          </ul>
+                        <img src="./images/news1.jpg">
+                      </div>
+                      <div class="modal_close">✖</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+      <div class="list">
+        <h3>2023.9.13~14 [イベント＆ライブ]</h3>
+          <div class="item">
+            <div class="modal_open" data-modal-open="modal-2">
+              <p>「ENHYPEN WORLD TOUR ’FATE’」日本上陸！</p>
+            </div>
+              <!--news contents in modal-->
+              <div class="modal_wrapper" data-modal="modal-2">
+                  <div class="modal_window">
+                    <div class="modal_content">
+                      <h3>「ENHYPEN WORLD TOUR ’FATE’」</h3>
+                      <p>2023年7月29日からソウル公演を出発に始まった「WORLD TOUR ’FATE’」<br>
+                        は9月2、3日に京セラドーム大阪での公演を無事終え、<br>
+                        同月13、14日に東京ドームでの公演が控えています！</p>
+                        <p><a href ="https://enhypen-jp.weverse.io/news/detail.php?nid=DgETivZBkP8=" target="_blank">
+                          最新のチケット情報はこちら</a></p>
+                      <img src ="./images/news2.jpg">
+                    </div>
+                    <div class="modal_close">✖</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      <div class="list">
+        <h3>2023.09.08 [TV]</h3>
+          <div class="item"> 
+            <div class="modal_open" data-modal-open="modal-3">
+              <p>「MUSIC STATION」に生出演決定！</p>
+            </div>
+              <!--news contents in modal-->
+              <div class="modal_wrapper" data-modal="modal-3">
+                <div class="modal_window">
+                  <div class="modal_content">
+                    <h3>「MUSIC STATION」に生出演決定！</h3>
+                    <p>9月8日(金)テレビ朝日系列「MUSIC STATION」の生出演が決定いたしました！</p>
+                      <ul>
+                        <li>番組名：テレビ朝日系列「MUSIC STATION」</li>
+                        <li>放送日時：9月8日(金)21:00～21:54</li>
+                      </ul>
+                        <p><a href ="https://www.tv-asahi.co.jp/music/" target="_blank">
+                          番組ホームページはこちら</a></p>
+                    <img src="./images/news3.jpg">
+                  </div>
+                  <div class="modal_close">✖</div>
+                </div>
+              </div> 
+            </div>
+          </div>
+
+      <div class="list">
+        <h3>2023.09.05 [リリース]</h3>                
+          <div class="item">
+            <div class="modal_open" data-modal-open="modal-4">
+              <p>日本 3rdシングル「結 -YOU-」予約販売開始！</p>
+            </div>
+              <!--news contents in modal-->
+              <div class="modal_wrapper" data-modal="modal-4">         
+                <div class="modal_window">
+                  <div class="modal_content">
+                    <h3>日本3rdシングル「結 -YOU-」 予約販売開始！</h3>
+                    <p>ENHYPEN Weverse Shop JAPANにて日本 3rd シングル「結 -YOU-」<br>OFFICIAL MERCHANDISEの予約販売が決定いたしました！<br>
+                      アルバムには日本語オリジナル曲「BLOSSOM」が収録されています♪</p>
+                    <p><a href = "https://weverseshop.io/en/shop/JP_JPY/artists/10/categories/1258" target="_blank">
+                      予約販売サイトはこちら</a></p>
+                    <img src="./images/news4.jpg">
+                </div>
+                <div class="modal_close">✖</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  <div class="watch-news"><a href="https://enhypen-jp.weverse.io/news/" target="_blank"> 
+    <p>最新のニュースを読む</p></a></div>
+  </section><!--news section-->
+
+  <!--script for modal buttons of news section-->
+  <script>
+    const modalWrapOpen = function(e) {
+      const dataModalOpen = e.currentTarget.dataset.modalOpen;
+      Array.from(document.querySelectorAll('.modal_wrapper')).forEach((e, i) => {
+        if(e.getAttribute('data-modal') === dataModalOpen){
+          e.classList.toggle('is_open');
+        }
+      })
+    }
+    
+    Array.from(document.querySelectorAll('.modal_open')).forEach((modalOpenElement) => {
+      modalOpenElement.addEventListener('click', modalWrapOpen);
+    })
+    
+    const modalCloseAction = function(e) {
+      const targetModal = e.currentTarget.closest('.modal_wrapper');
+      targetModal.classList.toggle('is_open')
+    };
+    
+    Array.from(document.querySelectorAll('.modal_close')).forEach((modalCloseElement) => {
+      modalCloseElement.addEventListener('click', modalCloseAction)
+    })
+  </script>
+
+
+  <!--music section-->
+    <section class="music">
+      <h1>NEW MUSIC</h1>    
+      <iframe class="new-music" width="560" height="315" src="https://www.youtube.com/embed/MeCgYZNFMEw?si=28E62CUKJHGi7k4s" title="YouTube video player" 
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      
+      <div class="more"><a href="https://www.youtube.com/watch?v=wXFLzODIdUI&list=PLMQ4WMltba-GshOjhZBypZnY-e9E2iUfU&index=3" target="_blank"> 
+        <h3>[BITE ME] by ENHYPEN</h3>
+      <p>最新のミュージックビデオを見る</p></a></div>
+    </section>
+
+  <!--member photos section-->
+  <section class="gallery">
+      <h1>MEMBERS</h1>
+
+  <!--click the photos to jump member page-->
+    <a href="member.html#JW">
+    <img src="./images/JW.jpg"></a>
+
+    <a href="member.html#HS">
+    <img src="./images/HS.jpg"></a>
+
+    <a href="member.html#J">
+    <img src="./images/J.jpg"></a>
+
+    <a href="member.html#JK">
+    <img src="./images/JK.jpg"></a>
+
+    <a href="member.html#SH">
+    <img src="./images/SH.jpg"></a>
+
+    <a href="member.html#SN">
+    <img src="./images/SN.jpg"></a>
+
+    <a href="member.html#NK">
+    <img src="./images/NK.jpg"></a>
+
+    <a href="member.html#GG">
+    <img src="./images/enlogo2.jpg" id="relative"></a>
+  </section>
+        
+        
+  <!--content section-->       
+  <section class="content">
+    <h1>CONTENTS</h1>
+      <div class="content-area">
+
+      <div class="more"> <h3>EN O' CLOCK</h3>
+        <div class="content-img">
+          <img src="./images/con1.jpg" alt="バラエティー番組">
+        </div>
+        <a href="https://www.youtube.com/playlist?list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO" target="_blank"> 
+        <p>バラエティー番組を観る</p></a>
+      </div>
+
+      <div class="more"><h3>黒の月：月の祭壇</h3>
+        <div class="content-img">
+          <img src="./images/con2.jpg" alt="マンガ" id="con2">
+        </div>
+        <a href="https://manga.line.me/product/periodic?id=Z0001724" target="_blank"> 
+        <p>マンガを読む</p></a>
+      </div>
+
+      <div class="more"><h3>I-LAND</h3>
+        <div class="content-img">
+          <img src="./images/con3.jpg" alt="サバイバル番組">
+        </div>
+        <a href="https://abema.tv/channels/abema-special/slots/CKtyfFs1oamgDV" target="_blank"> 
+        <p>サバイバル番組を観る</p></a>
+      </div>
+      
+    </div><!--content-area--->   
+  </section><!--content-->   
+</article>
+
+   <!--footer section-->
+   <div class="footer-img">
+    <img src="./images/Footer.jpg" alt="footer image">
+  </div>
+  
+  <footer class="footer">
+<!--footer SNS buttons section-->
+  <div class="footer-wrapper">
+
+    <div class="button"><a href="https://www.youtube.com/c/ENHYPENOFFICIAL/videos"target="_blank">
+    <div class="icon"><i class="fab fa-youtube"></i></div>
+      <span>YouTube</span></a>
+    </div>
+
+    <div class="button"><a href=" https://twitter.com/ENHYPEN_members"target="_blank">
+      <div class="icon"><i class="fab fa-twitter"></i></div>
+      <span>Twitter</span></a>
+    </div>
+
+    <div class="button"><a href=" https://www.instagram.com/enhypen/"target="_blank">
+      <div class="icon"><i class="fab fa-instagram"></i></div>
+      <span>Instagram</span></a>
+    </div>
+
+    <div class="button"><a href=" https://open.spotify.com/artist/5t5FqBwTcgKTaWmfEbwQY9" target="_blank">
+      <div class="icon"><i class="fab fa-spotify"></i></div>
+      <span>Spotify</span></a>
+    </div>
+
+    <div class="button"><a href="https://www.tiktok.com/@enhypen"target="_blank">
+        <div class="icon"><i class="fab fa-tiktok"></i></div>
+        <span>TikTok</span></a>
+    </div>
+
+    </div><!--footer wrapper-->
+
+    <div class="copyright">
+      <p>© BELIFT LAB</p>
+    </div>
+
+  </footer>
+  </body>
+</html>

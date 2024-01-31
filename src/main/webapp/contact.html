@@ -1,0 +1,221 @@
+<!-- 同じヘッダーとナビゲーションバーを使用 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/portfolio.css">
+    <title>Portfolio'23</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" sizes="200x200" href="./images/favicon.png">
+    
+    <title>Contact Form</title>
+    <script type="text/javascript" 
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('34GGdsHLVG4WuwKnS');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                    emailjs.sendForm('service_bccud7v', 'template_hlmxwxb', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+        
+        function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Show Back to Top button when scrolling
+window.onscroll = function () {
+    var backToTopButton = document.querySelector('.back-to-top');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+};
+    </script>
+       <style>
+
+ #contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+   
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+     color: rgb(209, 212, 159);
+     font-size: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border:none;
+     background-color: rgba(255, 255, 255, 0.1); /* Set background color to white with 0.3 opacity */
+    color: white; /* Set text color to white */
+}
+
+
+
+
+.btn-container {
+    text-align: center;
+}
+
+.btn {
+    width: 60%;
+}
+
+
+       #message-pop {
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+           color: rgb(209, 212, 159);
+        }
+    </style>
+</head>
+
+
+
+<body  id="contactPage">
+	 <div class="loader-wrapper"></div> 
+      <button onclick="scrollToTop()" class="back-to-top">Back to Top</button>
+       <button id="imageButton">Hello World</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var imageContainer = document.body;
+      var currentBackground = 1;
+
+      document.getElementById('imageButton').addEventListener('click', function() {
+        currentBackground = (currentBackground % 7) + 1; // Cycle through backgrounds 1 to 5
+        imageContainer.style.background = `url('./images/background${currentBackground}.jpg') no-repeat center center fixed`;
+        imageContainer.style.backgroundSize = 'cover';
+      });
+    });
+  </script>
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="alienCheck.jsp" class=>Back to Space</a></li>
+                <li><a href="top.html">Top contents</a></li>
+                 <li><a href="game/game.html">Mission Game</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html" >Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Contact Form</h1>
+ 
+    <button id="imageButton">Hello World</button>
+
+    <div id="imageContainer" class="default-image"></div>
+
+    <script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var imageContainer = document.body;
+    
+        document.getElementById('imageButton').addEventListener('click', function() {
+            // 切り替え前のクラスが既に設定されているか確認
+            if (imageContainer.classList.contains('default-background')) {
+                // 別の画像に切り替える
+                imageContainer.classList.remove('default-background');
+                imageContainer.style.backgroundImage = "url('./images/background2.jpg')";
+            } else {
+                // デフォルトの画像に戻す
+                imageContainer.classList.add('default-background');
+                imageContainer.style.backgroundImage = "url('./images/background1.jpg')";
+            }
+        });
+    });
+    
+    </script>
+
+
+    <section class="overlay">
+          <section class="contact">
+	<!--<h2>Address</h2>-->
+	 
+               <h3>Akahori Moemi</h3>
+	    <p style="text-align: left; margin-bottom: 30px; font-size: 20px;">Gmail : akahorimoemi625@gmail.com</p>
+               <div style=" border-top: 1px solid white; margin-right: 30px; margin-bottom: 30px; max-width: 100%;"></div>
+                  
+    <form id="contact-form">
+        <label>Name</label>
+        <input type="text" name="name" autocomplete="off" placeholder="Type here...">
+        <label>Email</label>
+        <input type="email" name="email" autocomplete="off" placeholder="Type here...">
+        <label>Message</label>
+        <textarea name="message" autocomplete="off" placeholder="Type here..." style="height: 150px;"></textarea>
+         <div class="btn-container">
+            <input type="submit" value="Send" class="btn" onclick="showMessageAndResetForm()">
+        </div>
+
+    </form>
+   
+
+    <script>
+        function showMessageAndResetForm() {
+            document.getElementById('message-pop').style.display = 'block';
+            
+            // フォームをリセット
+            document.getElementById('contact-form').reset();
+        }
+        
+         document.addEventListener("DOMContentLoaded", function () {
+		// ページが読み込まれたらローディング画面を非表示に
+		setTimeout(function () {
+		    document.querySelector(".loader-wrapper").style.opacity = 0;
+		    document.querySelector(".loader-wrapper").style.pointerEvents = "none";
+		}, 400); // ローディング画面の表示時間（1秒）
+		
+		// ここに背景画像への切り替えなどの処理を追加
+		});
+
+    </script>
+
+              
+               <p class="contact-p">Feel free to get in touch!</p>
+                <div id="message-pop" >
+        Thank you for your message! I sent you a confirmation email.
+    </div>
+    </section>
+</section>
+
+  
+
+
+<div class="footer"></div>
+ 
+    <footer>
+        <p>&copy; 2023 Moemi</p>
+    </footer>
+    
+</body>
+</html>

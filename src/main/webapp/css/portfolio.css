@@ -1,0 +1,890 @@
+@charset "UTF-8";
+
+ body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      font-size: larger;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      color: #fff;
+      background: url('../images/background1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      transition: background 0.5s ease;
+    }
+
+*:hover{
+    cursor: crosshair;
+}
+
+.home-star .shooting-star {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: url('./images/star.png'); /* 画像のパスを指定 */
+	background-size: cover;
+	animation: shootingStar 7s linear infinite;
+}
+
+.home-main .btn{
+    border-radius: 60%; 
+    font-size:20px; 
+    font-weight: bolder; 
+    padding: 10px 30px 15px 30px; 
+    cursor: pointer;
+}
+
+.home-main .btn:hover{
+    cursor: pointer;
+}
+
+h2{
+border-bottom: 1px solid #cecece;
+width: 30%;
+padding-bottom: 10px;
+}
+
+.game-title{
+font-size: 30px;
+}
+
+h1{
+text-align: center;
+margin: 80px auto 50px;
+}
+
+.b-h{
+color: rgb(209, 212, 159);
+margin: 10px auto 30px 80px;
+}
+
+header {
+color: #fff;
+padding: 10px;
+position: fixed;
+top:20px;
+left:20px;
+width:20%;
+}
+
+.about h3 {
+margin-top: 50px;
+border-bottom: .5px solid white;
+width:85%;
+padding-bottom: 10px;
+padding-left: 20px;
+}
+
+footer {
+
+color: #fff;
+padding: 10px;
+text-align: right;
+right: 0px;
+padding-bottom: 30px;
+position: fixed;
+bottom: 0;
+width: 20%;
+}
+
+.about ul li{
+text-decoration: none;
+margin-bottom: 10px; 
+list-style: none;
+color: rgb(209, 212, 159);
+font-weight: 20px;
+font-style: italic; /* イタリックにする */
+}
+
+p, h2{
+color: white;
+}
+
+p + p{
+margin:20px;
+}
+
+.overlay {
+width:800px;
+background: rgba(12, 12, 12, 0.694);/* 白色の半透明の背景を設定 */
+padding: 30px; /* コンテンツとボックスの内側の余白を設定 */
+margin: 20px auto 50px auto; /* 画面端からのマージンを設定 */
+border-radius: 10px; /* ボックスの角を丸くする */
+box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* ボックスに影を追加 */
+}
+
+.myskill {
+padding: 0;
+margin: 0;
+width:300px;
+
+}
+
+.project-card .btn{
+font-size: 15px;
+cursor: pointer;
+}
+
+
+.myskill li {
+display: inline-block; /* inline-blockにする */
+width: 45%; /* 幅を調整 */
+box-sizing: border-box; /* ボックスサイズを調整 */
+
+
+}
+
+.modal p{
+text-align: left;
+}
+
+.about{
+width:100%;
+}
+
+
+.about ul, .about h3{
+margin-left: 40px;
+}
+
+h3{
+color: rgb(179, 161, 187);
+}
+
+
+p{
+margin:30px 50px 0px 50px;
+}
+
+
+section{
+width:70%;
+margin:20px;
+}
+
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 150px;
+}
+
+nav ul li {
+margin-bottom: 30px;
+cursor: pointer;
+
+}
+
+nav ul li .active {
+color: rgb(209, 212, 159);
+border: 1px solid white;
+border-radius: 5px;
+ background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav ul li .active:hover {
+color: rgb(209, 212, 159);
+border: 1px solid white;
+border-radius: 5px;
+}
+
+.contact{
+font-size: 25px;
+width: 100%;
+}
+.contact ul{
+margin: 0px auto 0px auto;
+width: 70%;
+justify-content: center;
+
+}
+
+
+.contact ul li{
+margin-top: 10px;
+
+list-style: none;
+color: rgb(209, 212, 159);
+}
+
+.contact-p{
+text-align: right;
+}
+
+.btn3{
+font-size: 15px;
+cursor: pointer;
+}
+
+.inst-top {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 50%;
+}
+
+.projects{
+width:95%;
+}
+
+nav ul li a{
+color: white;
+text-decoration: none;
+padding: 10px;
+border: 1px solid rgba(255, 255, 255, 0);
+transition: all 0.3s;
+border-radius: 5px;
+}
+
+
+
+nav ul li a:hover{
+color: rgb(179, 161, 187);
+border: 1px solid white;
+transform: scale(1.1);
+border-radius: 5px;
+cursor: pointer;
+}
+
+nav ul li{
+margin: 30px 0px 80px;
+}
+
+.projects {
+display: flex;
+}
+
+.project-card {
+width: 300px;
+margin: 20px auto 20px auto;
+padding: 15px;
+border: 1px solid #ddd;
+z-index: 20;
+}
+
+
+.project-card img {
+width: 100%;
+height: auto;
+}
+
+.project-card h3 {
+margin: 10px;
+}
+
+.project-card .p {
+color: white;
+margin: 10px;
+font-size: 15px;
+}
+
+.project-card .h-b{
+margin: 10px;
+color: rgb(209, 212, 159);
+font-size: 18px;
+}
+
+
+.btn {
+display: inline-block;
+padding: 10px 15px;
+background-color:rgba(151, 132, 151, 0.6);
+border: 1px solid #ddd;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+margin: 10px;
+font-size: 18px;
+transition: transform 0.3s;
+cursor: pointer;
+}
+
+.btn:hover, .back-to-top:hover {
+background-color:rgba(190, 193, 146, 0.6);
+transform: scale(1.1);
+}
+
+.home nav{
+justify-content: center;
+width:100%;
+margin: 0px auto 0px auto;
+}
+
+.home-main{
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    margin:-20px 30px -20px 30px;
+}
+
+.home-main button{
+    font-size: 20px;
+    width:fit-content;
+    padding:20px;
+    margin-top: 30px;
+}
+
+.home ul li{
+display: inline-flex;
+border: 1px solid white;
+width:200px;
+padding: 30px 10px 20px;
+height: 120px;
+margin: 20px auto 10px auto;
+cursor: pointer;
+}
+
+.home ul li a:hover{
+color: white;
+border:none;
+}
+
+.home ul li a{
+width:100%;
+font-size: 25px;
+color: rgb(209, 212, 159);
+border:none;
+cursor: pointer;
+}
+
+.home{
+justify-content: center;
+margin: 0px auto 0px auto;
+}
+
+.home ul{
+text-align: center;
+display: inline-flex;
+width: 100%;
+margin: 0px auto 0px auto;
+
+}
+
+.home-navnav{
+font-size: 20px;
+width:100%;
+margin-left: 0px;
+padding-bottom: 0px;
+color: rgb(186, 178, 190);
+border-top: 1px solid white;
+padding-top: 20px;
+border-bottom: none;
+cursor: pointer;
+}
+
+.modal {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.7);
+justify-content: center;
+align-items: center;
+z-index: 999;
+}
+
+.modal-content {
+background: rgb(68, 68, 88);
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+max-width: 500px;
+margin: 90px auto 80px auto ;
+z-index: 50000;
+display: block;
+}
+
+#inst-modal{
+max-width: 75%;
+height: 75%;
+}
+
+.inst-btn {
+position: fixed;
+bottom: 85px; /* 下端からの距離を調整 */
+left: 50%;
+transform: translateX(-50%);
+
+}
+
+.inst-button {
+font-size: 15px;
+}
+
+
+/* 各言語のスタイル */
+.language-instructions {
+flex: 1; /* Flexアイテムが均等に広がるように設定 */
+text-align: justify;
+margin: 10px;
+display: flex; /* Flexコンテナとして設定 */
+justify-content: space-between; /* コンテンツを均等に配置 */
+}
+
+.language-instructions p {
+width: 50%;
+margin-top: 6px;
+}
+
+.language-instructions ul {
+padding: 0;
+width: 50%;
+color: rgb(187, 202, 213);
+}
+
+.language-instructions li {
+margin-bottom: 5px;
+color: rgb(187, 202, 213);
+}
+
+.modal-content h2{
+color: rgb(209, 212, 159);
+width: 100%;
+height: 100%;
+text-align: center;
+}
+
+.back-to-top {
+position: fixed;
+bottom: 40px;
+left: 40px;
+padding: 10px;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+display: none;
+background-color:rgba(151, 132, 151, 0.6);
+border: 1px solid #ddd;
+color: white;
+font-size: 20px;
+transition: transform 0.3s;
+cursor: pointer;
+}
+
+
+@keyframes bounce {
+0%, 100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(-10px); /* 上に動く距離 */
+}
+}
+
+.bounce {
+animation: bounce 1s infinite; /* アニメーションを1秒間繰り返す */
+}
+
+.board {
+display: grid;
+grid-template-columns: repeat(3, 100px); /* 3列に指定 */
+gap: 10px; /* カード間の隙間 */
+padding-bottom: 50px;
+}
+
+.card {
+width: 100px;
+height: 100px;
+font-size: 24px;
+text-align: center;
+background-color: rgba(134, 121, 199, 0.777);
+cursor: pointer;
+border: 1px solid white;
+box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.space{
+width:200px;
+margin: 0px 0px 300px;
+display: inline-block;
+}
+
+.game-greeting{
+text-align: center;
+}
+
+.btn2{
+color: black; 
+background-color: rgb(193, 193, 149);
+display: inline-block;
+padding: 10px;
+border: 1px solid #ddd;
+text-decoration: none;
+border-radius: 5px;
+margin: 10px;
+font-size: 15px;
+transition: transform 0.3s;
+cursor: pointer;
+}
+
+.btn2:hover{
+color: rgb(47, 56, 87); 
+background-color: rgb(149, 179, 193);
+transform: scale(1.1);
+}
+
+
+
+.modal-btn{
+display: inline-block;
+margin-bottom: 40px;
+font-size: 18px; 
+}
+
+
+
+#rotate-image {
+width: 200px;
+height: 200px;
+animation: rotate-clockwise 7s linear infinite; /* 時計回りのアニメーションの定義 */
+
+}
+
+#rotate-image2 {
+width: 200px;
+height: 200px;
+animation: rotate-counterclockwise 13s linear infinite; /* 反時計回りのアニメーションの定義 */
+padding: 300px 0px 800px 0px;
+}
+
+@keyframes rotate-clockwise {
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+}
+
+@keyframes rotate-counterclockwise {
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(-360deg);
+}
+}
+
+@keyframes shootingStar {
+0% {
+transform: translate(100vw, -100vh) rotate(0deg);
+}
+100% {
+transform: translate(-100vw, 100vh) rotate(1080deg);
+}
+}
+
+.modal-content ul {
+text-align: left;
+}
+
+.game-title{
+text-align: center;
+}
+
+.game-title h1{
+color: rgb(58, 57, 104);
+margin-top: 20px;
+font-size: 38px;
+}
+
+.game-title p{
+font-size: 25px;
+color: rgb(58, 57, 104);
+}
+
+.modal-content h2{
+color: rgb(193, 193, 149); 
+text-align: center; 
+width: 100%;
+}
+
+
+
+/* 共通のスタイル */
+.language-instructions {
+text-align: justify;
+margin-bottom: 10px; /* 適宜調整 */
+}
+
+/* 各言語のスタイル */
+#englishInstructions {
+font-size: 16.5px; /* 適宜調整 */
+line-height: 1.5; /* 適宜調整 */
+}
+
+#japaneseInstructions {
+font-size: 16px; /* 適宜調整 */
+line-height: 1.5; /* 適宜調整 */
+}
+
+#koreanInstructions {
+font-size: 17px; /* 適宜調整 */
+line-height: 1.5; /* 適宜調整 */
+}
+
+body, html {
+margin: 0;
+padding: 0;
+height: 100%;
+}
+
+.loading-container {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #000;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+}
+
+.background {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 100%;
+height: 100%;
+background: radial-gradient(circle, transparent 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.8) 100%);
+transform: translate(-50%, -50%) scale(1);
+animation: backgroundAnimation 2s ease-out infinite;
+}
+
+.loading-circle {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 10px;
+height: 10px;
+background: #fff;
+border-radius: 50%;
+animation: pulseAnimation 1s ease-out infinite;
+}
+
+@keyframes pulseAnimation {
+0%, 100% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.5);
+}
+}
+
+@keyframes backgroundAnimation {
+to {
+transform: translate(-50%, -50%) scale(2);
+opacity: 0;
+}
+}
+
+.content {
+display: none;
+text-align: center;
+color: #fff;
+font-family: Arial, sans-serif;
+}
+
+.loaded .loading-container {
+display: none;
+}
+
+.loaded .content {
+display: block;
+}
+
+/* LP*/
+canvas {
+width: 100%;
+height: 100%;
+}
+
+.hero {
+text-align: center;
+position: absolute;
+top: 50%;
+left: 50%;
+color: white;
+transform: translate(-50%, -50%);
+}
+
+.hero h1 {
+font-size: 60px;
+padding: 0px;
+}
+
+.hero p {
+font-size: 15px;
+width:100%;
+margin: 0px auto 0px auto;
+}
+
+.btn-top{
+display: inline-block; /* inline-blockに変更 */
+position: fixed;
+left: 40px;
+top:40px;
+background-color:rgba(255, 255, 255, 0);
+border-radius: 5px;
+padding: 10px;
+border:1px solid white;
+text-decoration: none;
+color: white;
+font-size: 18px;
+transition: transform 0.3s;
+cursor: pointer;
+}
+
+.hero h2{
+font-size:80px;
+margin:0px auto;
+border: none;
+transition: transform 0.3s;
+}
+
+.home h1{
+font-weight: lighter;
+font-size: 25px;
+}
+
+.home{
+padding-bottom:50px ;
+}
+
+.hero h2:hover{
+transform: scale(1.2);
+color: rgb(193, 193, 149); 
+}
+
+.inst-top{
+    font-size: 30px;
+    right: 20px;
+    top: 20px;
+    position: fixed;
+  }
+
+  .inst-top h3{
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    padding-bottom: 0px;
+    position: fixed;
+    right:180px;
+    top:80px;
+  }
+
+.footer{
+height:40px;
+width:100%;
+}
+
+.about img{
+    width:300px;
+    border-radius: 50%;
+    right:20px;
+}
+
+.me{
+    display:flex;
+    margin-left: 10%;
+
+}
+
+.mep{
+    margin:40px;
+    padding-top: 100px;
+}
+
+
+.hero .btn-top{
+left: 0;
+top:0;
+position:relative;
+margin: 0px auto 0px auto;
+width:fit-content;
+}
+
+.btn-top:hover{
+transform: scale(1.1);
+border:1px solid rgb(193, 193, 149); 
+color: rgb(193, 193, 149); 
+
+}
+
+
+.loader-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #000; /* ローディング画面の背景色 */
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 9999;
+opacity: 1;
+transition: opacity 5s ease; /* ローディング画面のフェードアウト用 */
+}
+
+.pro-top a{
+		color: white; 
+		cursor: pointer;
+		
+	}
+	.pro-top h4{
+		text-align: center;
+		color: rgb(209, 212, 159);
+		margin-bottom: -15px;
+	}
+	
+	.pro-top .s-c{
+		color:lightslategray;
+	}
+  
+  
+        .download-btn {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50%; 
+            margin-top: -10px; 
+            text-align: center;
+        }
+
+        .download-btn ion-icon {
+            margin-right: 5px;
+        }
+       
+       
+ #imageButton {
+    position: fixed;
+    top: 40px; 
+    background: none;
+    right: 40px; 
+    z-index: 1;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#imageButton:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+
+    

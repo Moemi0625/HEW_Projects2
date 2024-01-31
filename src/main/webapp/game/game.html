@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio '23</title>
+    <link rel="stylesheet" href="game.css">
+    <script defer src="game.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" href="./img/favicon.png">
+    <link rel="icon" sizes="200x200" href="./images/favicon.png">
+    </head>
+<body>
+	  <div class="loader-wrapper"></div>
+	  <a href="../top.html" class="btn-top">地球に戻る</a>
+  <div class="container">
+
+    <!--Start modal section-->
+    <section class="start-game-modal">
+      <div id="start-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content" >
+          <h3 style="font-size: 35px; font-weight: bolder; margin-top: 50px;">Welcome to Mars</h3>
+          <p>ようこそ、火星へ。我々の任務「調査書の解読」の第一歩です。</p>  
+           <p style="margin-top: -20px;">さっそく任務の難易度を選択しましょう。難易度によって翻訳できる言語の種類と数が変わります！</p>  
+          <div class="modal-content-options" style="margin-bottom: 50px;">
+            <button class="btn play-again-btn" id="easyGame" style=" border-radius: 45px;">レベル１</button>
+            <button class="btn play-again-btn" id="mediumGame" style="margin: 0 30px 0 30px; border-radius: 45px;">レベル2</button>
+            <button class="btn play-again-btn" id="hardGame" style=" border-radius: 45px;">レベル3</button>
+          </div>
+          <a href="../top.html" class="btn">地球に戻る</a>
+            <a href="../alienCheck.jsp" class="btn">宇宙に戻る</a>
+        </div>
+      </div>
+    </section>
+
+   
+      <div class="modal-btn" style="margin-top: 100px;">
+        
+       
+       
+        <h1 style="font-size: 40px; margin-bottom: 35px; line-height: 1.5;">Polyglot Memory Quest</h1>
+        <h3 style="margin-top:-20px; color:white; font-weight:bolder;">～ 翻訳を目指して ～</h3>
+         
+        <button onclick="openModal('instructions')" class="btn2">ルール</button>
+        <button onclick="openModal('hints')" class="btn2">ヒント</button>
+        <button class="btn4 btn-ref reset-btn" style="  border-radius: 50px; font-size: 20px; padding: 20px;" >
+          もう一度プレイする
+        </button>
+
+        
+        <ul id="star-rating" class="star-rating">
+          <li class="star"><i class="fa fa-star fa-lg"></i></li>
+          <li class="star"><i class="fa fa-star fa-lg"></i></li>
+          <li class="star"><i class="fa fa-star fa-lg"></i></li>
+          <li class="star"><i class="fa fa-star fa-lg"></i></li>
+          <li class="star"><i class="fa fa-star fa-lg"></i></li>
+        </ul>
+        <div class="btn4 timer-container"><ion-icon name="timer-outline">
+        </ion-icon><span class="timer">00:00</span></div>
+        
+        <div class="btn4 timer-container">
+        <span>
+          <span class="moves-counter">0</span>
+          Moves
+        </span>
+        </div>
+        </div>
+        
+        <div id="instructionsModal" class="modal">
+            <div class="modal-content" id="inst-modal">
+              <h3>Game Instructions</h3>
+                <div class="inst-top">
+                <!-- <button onclick="switchLanguage('english')" class="btn3">English</button>
+                <button onclick="switchLanguage('korean')" class="btn2">한국어</button> -->
+                <!-- <button onclick="switchLanguage('japanese')" class="btn3">日本語</button> -->
+                <h3 onclick="switchLanguage('toggle')">
+                  <ion-icon name="language-outline"></ion-icon>
+                </h3>
+              </div>
+        
+        <script>
+            let currentLanguage = 'english'; // 初期言語を設定
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            // ここでcurrentLanguageを初期化する
+            if (!currentLanguage) {
+                currentLanguage = 'english';
+            }
+        });
+        
+        function switchLanguage(language) {
+            // 言語ごとの要素を取得
+            const englishInstructions = document.getElementById('englishInstructions');
+            const japaneseInstructions = document.getElementById('japaneseInstructions');
+            const toggleButton = document.getElementById('toggleButton');
+        
+            // 切り替えボタンがクリックされた場合、現在の言語をトグル
+            if (language === 'toggle') {
+                currentLanguage = currentLanguage === 'english' ? 'japanese' : 'english';
+            } else {
+                currentLanguage = language;
+            }
+        
+            // 言語ごとの要素を表示/非表示切り替え
+            if (currentLanguage === 'english') {
+                englishInstructions.style.display = 'block';
+                japaneseInstructions.style.display = 'none';
+                toggleButton.textContent = 'Japanese'; // ボタンテキストを変更
+            } else if (currentLanguage === 'japanese') {
+                englishInstructions.style.display = 'none';
+                japaneseInstructions.style.display = 'block';
+                toggleButton.textContent = 'English'; // ボタンテキストを変更
+            }
+        
+            console.log(`Current Language: ${currentLanguage}`);
+        }
+
+        function openModal(modalId) {
+    var modal = document.getElementById(modalId + "Modal");
+    if (modal) {
+        modal.style.display = "block";
+    }
+}
+
+function closeModal(modalId) {
+    var modal = document.getElementById(modalId + "Modal");
+    if (modal) {
+        modal.style.display = "none";
+    }
+}
+        </script>
+
+           
+        <!-- English Instructions -->
+        <div id="englishInstructions">
+            <h4>Hi, player! Welcome to</h4>
+            <h2>Polyglot Memory Quest : Chasing Translation</h2>
+            <h4>How To Play</h4>
+            <div class="language-instructions">
+            <p >"Polyglot Memory Quest : Chasing Translation" is a new and exciting memory card game where you can enjoy learning languages and cultures 
+                by matching flags, greetings, and cultural image cards which express each different countries.
+                Your goal is to correctly match all combinations and translate into all languages! 
+                There are a total of 3 countries in the game – can you guess which ones?
+                <ul>
+                    <li>Click START button to begin the game, and RESET <br> button to reset and restart it.</li>
+                    <li>If you are unsure, check hints from HINT button.</li>
+                    <li>There is no time limit, so take your time to think.</li>
+                    <li>After you complete the game, choose the language <br> from the options will be given.</li>
+                </ul>   
+            </div>       
+            <h4>Enjoy the adventure of discovering new words and cultures!</h4>
+        </div>
+        
+          <!-- Japanese Instructions -->
+          <div id="japaneseInstructions" style="display: none;">
+            <h4>ようこそ、プレイヤーの皆さん♪ </h4>
+            <h2 class="game-title">Polyglot Memory Quest：翻訳を目指して</h2>
+            <h4>ゲームのあそび方について</h4>
+            <div class="language-instructions">
+                <p>「多言語記憶の探求：翻訳を目指して」は、言語と文化を楽しみながら学ぶ新感覚のメモリーカードゲームです。
+                各国の国旗、あいさつ、文化を表すカードを国ごとに正しくマッチングしていきます。
+                目指すはすべてのカードの組み合わせを見つけ出し、サイトの記事を他国の言語に翻訳すること！
+                ゲームに出てくる国は全部で3か国。さて、一体どこの国か、推測できるでしょうか？
+                <ul >
+                    <li>STARTボタンでゲーム開始、RESETボタンで<br>ゲームリセットです。</li>
+                    <li>どうしてもわからない時はHINTボタンからヒントを<br>確認できます。</li>
+                    <li>時間制限はありません、じっくり考えてください。</li>
+                    <li>ゲーム終了時に、翻訳する言語を選択肢から選んでください。</li>
+                </ul>
+            </div>
+                <h4>では、新しい言葉と文化の冒険をぜひ楽しんでください♪</h4>
+        </div>
+        
+        
+                <div class="inst-btn">
+                    <button onclick="closeModal('instructions')" class="btn" style="margin-bottom: -80px;">Understood!</button>
+                </div>
+            </div>
+        </div>
+        
+	
+		<style>
+   #hintImage {
+      max-width: 200px; /* 画像の最大横幅 */
+      max-height: 200px; /* 画像の最大高さ */
+      width: 100%; /* 横幅100%で親要素に合わせる */
+   }
+
+   #hintTitle {
+      font-size: 20px; /* タイトルのフォントサイズ */
+      font-weight: bold; /* 太字 */
+      margin-bottom: 10px; /* 下のマージン */
+        color: rgb(209, 212, 159);
+   }
+   
+   #hintText {
+    font-size: 20px; /* タイトルのフォントサイズ */
+      margin-bottom: 20px; /* 下のマージン */
+   }
+</style>
+
+<div id="hintsModal" class="modal">
+   <div class="modal-content">
+      <h3>Card Hints</h3>
+       <h4>各カードの種類と意味を知ろう</h4>
+      <div id="hintContainer">
+         <!-- ヒントのタイトルと内容を表示する領域 -->
+         <p id="hintTitle"></p>
+      </div>
+      <div class="hint-images">
+         <img id="hintImage" src="" alt="Hint Img">
+      </div>
+       <div id="hintContainer">
+         <p id="hintText"></p>
+      </div>
+      <button onclick="showNextHint()" class="btn">もっとヒントを...!</button>
+      <button onclick="closeModal('hints')" class="btn">閉じる</button>
+   </div>
+</div>
+
+<script>
+var currentHintIndex = 0; // 現在のヒントのインデックス
+
+var hints = [  
+   { title: "ヒント1 [日本] 富士山",text: "富士山は1872（明治５）年までは、女人禁制の山だった", imageSrc: "img/jp1.png" },
+   { title: "ヒント2 [日本] 桃太郎",text: "【桃】太郎の由来は、桃が邪気を祓う力があると中国と日本で考えられていたから", imageSrc: "img/jp.png" },
+   { title: "ヒント3 [韓国] チマチョゴリ",text: "韓国女性の伝統衣装チマチョゴリは防寒のためスカートが丸い形になっている", imageSrc: "img/ko3.png" },
+   { title: "ヒント4 [韓国] ビビンバ",text: "韓国の代表的な料理ビビンバは韓国語で「混ぜご飯」という意味", imageSrc: "img/ko4.png" },
+   { title: "ヒント5 [オーストラリア] タスマニアデビル",text: "1845種（日本の3倍）登録されたオーストラリアの絶滅危惧の一つでタスマニア島に生息する", imageSrc: "img/aus.png" },
+   { title: "ヒント6 [オーストラリア] 南極サンタさん",text: "オーストラリアの12月は真夏で海にはサンタサーファーがいる", imageSrc: "img/aus4.png" },
+   { title: "ヒント7 [フィリピン] ハロハロ",text: "フィリピンの代表的なかき氷デザートハロハロはタガログ語で「混ぜこぜ」という意味", imageSrc: "img/phl.png" },
+   { title: "ヒント8 [フィリピン] ジャスミン",text: "ジャスミンは「永遠の愛」という花言葉を持つフィリピンの国花", imageSrc: "img/phl2.png" },
+   // 他のヒントを必要なだけ追加できます
+];
+
+// 初期表示
+updateHint();
+
+function updateHint() {
+   var hintContainer = document.getElementById("hintContainer");
+   var hintTitle = document.getElementById("hintTitle");
+   var hintText = document.getElementById("hintText");
+   var hintImage = document.getElementById("hintImage");
+
+   hintTitle.textContent = hints[currentHintIndex].title;
+   hintText.textContent = hints[currentHintIndex].text;
+   hintImage.src = hints[currentHintIndex].imageSrc;
+}
+
+function showNextHint() {
+   currentHintIndex++;
+   if (currentHintIndex >= hints.length) {
+      currentHintIndex = 0; // ヒントが最後まで表示されたら最初に戻る
+   }
+   updateHint();
+}
+</script>
+
+
+
+  <div id="modal" class="modal win">
+  <!-- Modal content -->
+  <div class="modal-content" id="win-modal-content" style="width:70%; height:70%;">
+    <div id="modal-details">
+      <span class="close">&times;</span>
+      <h3 style="font-size: 30px; font-weight: bolder; margin-top: -30px;">Congratulations!</h3>
+      <p style="margin-top:-20px;">これで我々の任務「調査書の解読」を完遂できそうです♪</P>
+      <div class="tenor-gif-embed" data-postid="15384587" data-share-method="host" data-aspect-ratio="1.77778" data-width="40%"><a href="https://tenor.com/view/funny-dancing-excited-green-man-halloween-gif-15384587">Funny Dancing GIF</a>from <a href="https://tenor.com/search/funny-gifs">Funny GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      <br>
+      <div style="margin-bottom: -20px; display: flex; justify-content: space-between;">
+        <button class="btn play-again-btn" id="play-again">
+          もう一度<br>プレイする
+        </button>
+        <p>OR</p>
+    <!-- 翻訳ボタン -->
+    <button id="japaneseBtn" class="btn" onclick="translateAndNotify('ja')">日本語に<br>翻訳する</button>
+    <button id="koreanBtn" class="btn" onclick="translateAndNotify('ko')">韓国語に<br>翻訳する</button>
+    <button id="tagalogBtn" class="btn" onclick="translateAndNotify('fil')">タガログ語に<br>翻訳する</button>
+    <button id="ausEnglishBtn" class="btn" onclick="translateAndNotify('en')">オーストラリア英語に<br>翻訳する</button>
+
+    <script src="translation.js"></script>
+
+   </div>
+    </div>
+  </div>
+  
+   
+         </div>
+
+    </div>
+
+<div style="position:fixed; margin-left:150px;">
+    <ul class="deck"></ul>
+    </div>
+   
+  <script src="game.js"></script>
+ 
+  
+<footer>
+    <p>&copy; 2023 Moemi</p>
+</footer>
+</body>
+
+</html>
