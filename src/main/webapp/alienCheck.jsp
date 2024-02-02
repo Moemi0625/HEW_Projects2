@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio'23</title>
-    <script defer src="space.js"></script>
+    <script defer src="js/space.js"></script>
     <link rel="stylesheet" href="css/portfolio.css">
-    <link rel="stylesheet" href="space.css" />
+    <link rel="stylesheet" href="css/space.css" />
     <link rel="icon" href="favicon.ico">
     <link rel="icon" sizes="200x200" href="./images/favicon.png">
 </head>
@@ -29,7 +29,8 @@
     <ion-icon name="radio-outline" onclick="readText()"></ion-icon></h6>
 
 <!-- 地球に行くボタン -->
-<a href="top.html" onclick="addBlackScreen()" class="btn-top go-earth top-hover"><ion-icon name="rocket-outline" style="font-size: 30px; cursor: pointer;">
+<a href="top.html" onclick="addBlackScreen()" class="btn-top go-earth top-hover">
+<ion-icon name="rocket-outline" style="font-size: 30px; cursor: pointer;">
 </ion-icon><br>地球に行く</a>
 
 <!-- モーダル診断コンテンツ -->
@@ -37,13 +38,17 @@
 	    <div class="alien-modal-content">
 	
 	    <form action="AlienCheck" method="post">
-	    <h4 style="text-align:center;margin: 50px auto -20px auto;">地球に行くべきか否か<br>あなたの任務適性度を測ってみよう</h4>
-	        <div class="question-box">
+	    <h4 style="text-align:center;margin: 50px auto -20px auto;">地球に行くべきか否か<br>
+	    	あなたの任務適性度を測ってみよう</h4>
+	    	
+	    	
+  	<div class="question-box" id="q-1">
 	    <label>１．あなたの固有名は？</label><br><br>
-	    <input type="text" name="name" required style="margin-left:25px; padding:10px;width:220px;" autocomplete="off">
+	    <input type="text" name="name" required style="margin-left:25px; padding:10px;width:220px;" 
+	    autocomplete="off">
 	</div>
 
-   <div class="question-box">
+   <div class="question-box" id="q-2">
        <label>２．あなたの見た目年齢は？</label>
        <div class="options">
            <input type="radio" name="age" value="1" required> 生まれたての歳～50歳<br>
@@ -52,7 +57,7 @@
        </div>
    </div>
 
-   <div class="question-box" style="margin-top:-40px;">
+   <div class="question-box" style="margin-top:-40px;" id="q-3">
        <label>３．あなたの母国の言語は？</label>
        <div class="options">
            <input type="radio" name="language" value="1" required> 日本語<br>
@@ -61,8 +66,8 @@
            <input type="radio" name="language" value="4"> 私に言葉の概念は存在しない<br>
        </div>
    </div>
-
-   <div class="question-box" style="margin-top:-25px;">
+ 
+   <div class="question-box" style="margin-top:-25px;" id="q-4">
        <label>４．あなたの肌色は？</label>
        <div class="options">
            <input type="radio" name="skinColor" value="1" required> 人間の肌色<br>
@@ -71,8 +76,9 @@
        </div>
    </div>
 
-        <div style="display:flex; justify-content:center;">
-            <button id="closeModalBtn" type="button" class="btn" style="width: 20%; margin: 20px; cursor:pointer:">閉じる</button>
+        <div style="display:flex; justify-content:center;" id="q-btn">
+            <button id="closeModalBtn" type="button" class="btn" style="width: 20%; margin: 20px; 
+            cursor:pointer:">閉じる</button>
             <input type="submit" value="診断する" class="btn" style=" width:20%; margin:20px;">
         </div>
         
@@ -115,116 +121,7 @@
 		  referrerpolicy="no-referrer">
 		</script>
      
-  <script>
-
-  // モーダルを開くための関数
-  function openModal() {
-      var modal = document.getElementById('alienCheckModal');
-      modal.style.display = 'block';
-  }
-
-  // モーダルを閉じるための関数
-  function closeModal() {
-      var modal = document.getElementById('alienCheckModal');
-      modal.style.display = 'none';
-  }
-
-  // モーダルトリガーボタンにクリックイベントを追加
-  var openModalBtn = document.getElementById('openModalBtn');
-  openModalBtn.addEventListener('click', openModal);
-
-  // モーダル外をクリックしたらモーダルを閉じる
-  window.addEventListener('click', function(event) {
-      var modal = document.getElementById('alienCheckModal');
-      if (event.target === modal) {
-          closeModal();
-      }
-  });
-
-  // ボタンにクリックイベントを追加してモーダルを閉じる
-  var closeModalBtn = document.getElementById('closeModalBtn');
-  closeModalBtn.addEventListener('click', closeModal);
-
-  function readText() {
-	  var textToRead = document.getElementById('textToRead').textContent;
-	  var utterance = new SpeechSynthesisUtterance(textToRead);
-	  speechSynthesis.speak(utterance);
-	}
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-      // ページが読み込まれたらローディング画面を非表示に
-      setTimeout(function () {
-        document.querySelector(".loader-wrapper").style.opacity = 0;
-        document.querySelector(".loader-wrapper").style.pointerEvents = "none";
-      }, 1000); // ローディング画面の表示時間（1秒）
-
-      // ここに背景画像への切り替えなどの処理を追加
-    });
-
-
-    // TextTypingというクラス名がついている子要素（span）を表示から非表示にする定義
-    function TextTypingAnime() {
-        $('.TextTyping').each(function () {
-            var elemPos = $(this).offset().top - 50;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            var thisChild = "";
-            if (scroll >= elemPos - windowHeight) {
-                thisChild = $(this).children(); //spanタグを取得
-                //spanタグの要素の１つ１つ処理を追加
-                thisChild.each(function (i) {
-                    var time = 150;
-                    //時差で表示する為にdelayを指定しその時間後にfadeInで表示させる
-                    $(this).delay(time * i).fadeIn(time);
-                });
-            } else {
-                thisChild = $(this).children();
-                thisChild.each(function () {
-                    $(this).stop(); //delay処理を止める
-                    $(this).css("display", "none"); //spanタグ非表示
-                });
-            }
-        });
-    }
-
-    // アニメーションをリセットしてループする関数
-    function resetAnimation() {
-        $('.TextTyping span').hide();
-        $('.TextTyping::after').css("opacity", 0);
-        TextTypingAnime();
-    }
-
-    // 画面をスクロールをしたら動かしたい場合の記述
-    $(window).scroll(function () {
-        TextTypingAnime(); /* アニメーション用の関数を呼ぶ*/
-    });
-
-    // 画面が読み込まれたらすぐに動かしたい場合の記述
-    $(window).on('load', function () {
-        // spanタグを追加する
-        var element = $(".TextTyping");
-        element.each(function () {
-            var text = $(this).html();
-            var textbox = "";
-            text.split('').forEach(function (t) {
-                if (t !== " ") {
-                    textbox += '<span>' + t + '</span>';
-                } else {
-                    textbox += t;
-                }
-            });
-            $(this).html(textbox);
-
-        });
-
-        TextTypingAnime(); /* アニメーション用の関数を呼ぶ*/
-    });
-
-    // アニメーションをリセットしてループする
-    setInterval(resetAnimation, 10000); // ループの間隔を設定（ここでは3秒ごと）
-
-  </script>
+  <script src="js/alien.js"></script>
 
 <div class="footer"></div>
 

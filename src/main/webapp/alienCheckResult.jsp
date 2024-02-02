@@ -21,72 +21,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio'23</title>
     <link rel="stylesheet" href="css/portfolio.css">
-    <script defer src="script.js"></script>
+     <link rel="stylesheet" href="css/result.css">
+    <script defer src="js/script.js"></script>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" sizes="200x200" href="./images/favicon.png">
-  
-    <style>
-    body {
-    background-image: url('./images/moon-surface.jpg');
-    background-size: cover;
-    font-family: Arial, sans-serif;
-    color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-}
-
-.image-container {
-    flex: 1;
-}
-
-.image-container img{
-width:450px;
-height:50%;}
-
-.result-box {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    width: 40%;
-    border: 1px solid white;
-    margin-right:10%;
-    
-}
-
-.result-box h1 {
-    margin-bottom: 50px;
-    margin-top:30px;
-}
-
-.result-box a.btn {
-    margin-top: 30px;
-}
-
-h2{
-font-size:60px;
-margin:-30px auto;
-border: none;
-transition: transform 0.3s;
-}
-
-h2:hover{
-transform: scale(1.2);
-color: rgb(193, 193, 149); 
-}
-</style>
 </head>
 <body>
  <div class="loader-wrapper"></div>

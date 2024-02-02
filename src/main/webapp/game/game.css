@@ -642,4 +642,22 @@ font-size: 18px;
 transition: transform 0.3s;
 cursor: pointer;
 }
+
+ #hintImage {
+      max-width: 200px; /* 画像の最大横幅 */
+      max-height: 200px; /* 画像の最大高さ */
+      width: 100%; /* 横幅100%で親要素に合わせる */
+   }
+
+   #hintTitle {
+      font-size: 20px; /* タイトルのフォントサイズ */
+      font-weight: bold; /* 太字 */
+      margin-bottom: 10px; /* 下のマージン */
+        color: rgb(209, 212, 159);
+   }
+   
+   #hintText {
+    font-size: 20px; /* タイトルのフォントサイズ */
+      margin-bottom: 20px; /* 下のマージン */
+   }
     

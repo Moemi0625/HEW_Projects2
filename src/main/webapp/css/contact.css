@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+ #contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+   
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+     color: rgb(209, 212, 159);
+     font-size: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border:none;
+     background-color: rgba(255, 255, 255, 0.1); /* Set background color to white with 0.3 opacity */
+    color: white; /* Set text color to white */
+}
+
+
+
+
+.btn-container {
+    text-align: center;
+}
+
+.btn {
+    width: 60%;
+}
+
+
+       #message-pop {
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+           color: rgb(209, 212, 159);
+        }

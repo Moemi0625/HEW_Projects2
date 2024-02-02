@@ -5,33 +5,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="css/portfolio.css">
     <title>Portfolio'23</title>
-    <script defer src="script.js"></script>
+    <script defer src="js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" sizes="200x200" href="./images/favicon.png">
+    <link rel="icon" sizes="200x200" href="/images/favicon.png">
 </head>
 
 <body  id="aboutPage">
     <div class="loader-wrapper"></div> 
       <button onclick="scrollToTop()" class="back-to-top">Back to Top</button>
-       <button id="imageButton">Hello World</button>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var imageContainer = document.body;
-      var currentBackground = 1;
-
-      document.getElementById('imageButton').addEventListener('click', function() {
-        currentBackground = (currentBackground % 7) + 1; // Cycle through backgrounds 1 to 5
-        imageContainer.style.background = `url('./images/background${currentBackground}.jpg') no-repeat center center fixed`;
-        imageContainer.style.backgroundSize = 'cover';
-      });
-    });
-  </script>
-
+      
+        <button id="imageButton">Hello World</button>
+        <div id="imageContainer" class="default-image"></div>
+    	<script src="js/world.js"></script>
+    	
     <header>
         <nav>
             <ul>
@@ -53,53 +43,29 @@
         <img src="./images/me.jpg"><br><br>
         <div>
 			
-		 <p style="margin:50px;
-    font-size: 28px;
-    margin-top: 60px;
-	font-weight: bolder;">
-            "Hello! <br>
-            I'm Moemi Akahori, <br>an IT student of HAL."</p>
-    
+		 <p class="about-intro">
+            "Hello! <br>I'm Moemi Akahori, <br>an IT student of HAL."</p>
+
 		<!-- ダウンロードボタン -->
 		<button id="downloadButton" class="download-btn btn">
 			<ion-icon name="open-outline"></ion-icon>resume</button>
 		</div>
 		</div>
        
-		<script>
-		document.getElementById('downloadButton').addEventListener('click', function() {
-		    // 履歴書のファイルを取得
-		    const imageUrl = 'images/resume.pdf'; // imagesフォルダにある場合の例
-		    fetch(imageUrl)
-		        .then(response => response.blob())
-		        .then(blob => {
-		            // Blobオブジェクトを作成し、ダウンロードリンクを生成
-		            const url = URL.createObjectURL(blob);
-		
-		            // ダウンロード用リンクを生成
-		            const downloadLink = document.createElement('a');
-		            downloadLink.href = url;
-		            downloadLink.download = 'resume.pdf'; // ファイル名に合わせて調整
-		
-		            // リンクをクリックしてダウンロードを開始し、リンクを削除
-		            document.body.appendChild(downloadLink);
-		            downloadLink.click();
-		            document.body.removeChild(downloadLink);
-		        });
-		});
-		</script>
+		<script src="js/about.js"></script>
 
         <div class="about-box">
         <h3>Academic <br>Background</h3>
-<ul>
-    <li>Mar 2020 
-        <p class="b-h">Graduated from <br>Seong Jung Junior High School (Seoul, Korea)</p></li>
-    <li>Oct 2022 
-        <p class="b-h">Completed high school program <br>at Canning College (WA, Australia)</p></li>
-    <li>Apr 2023 
-        <p class="b-h">Enrolled at Tokyo HAL, <br>Faculty of IT, Department of Information Processing</p></li>
-</ul>
-</div><br><br>
+        
+		<ul>
+		    <li>Mar 2020 
+		        <p class="b-h">Graduated from <br>Seong Jung Junior High School (Seoul, Korea)</p></li>
+		    <li>Oct 2022 
+		        <p class="b-h">Completed high school program <br>at Canning College (WA, Australia)</p></li>
+		    <li>Apr 2023 
+		        <p class="b-h">Enrolled at Tokyo HAL, <br>Faculty of IT, Department of Information Processing</p></li>
+		</ul>
+		</div><br><br>
 
         <p style="line-height: 30px;">
             My tech journey started in high school in Australia, fueled by my love for <br>drawing and painting, 
@@ -128,12 +94,13 @@
         </p><br><br>
      
     </section>
-    <!-- Additional content for the about page -->
 
 </section>
    
 </body>
+
 <div class="footer"></div>
+
 <footer>
     <p>&copy; 2023 Moemi</p>
 </footer>
