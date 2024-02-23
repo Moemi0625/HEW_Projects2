@@ -1,15 +1,13 @@
- body {
-    background-image: url('moon-surface.jpeg'); /* 画像のパスに適切なものを指定 */
-    background-size: cover;
-    background-attachment: fixed; /* 画像を固定するためのプロパティ */
-    font-family: Arial, sans-serif;
-    color: white;
-    text-align: center;
-    margin: 0; /* マージンを0に設定して、デフォルトのボディマージンを取り除く */
-    overflow: hidden; /* スクロールバーを非表示にする */
-}
-
-
+		 body {
+		    background-image: url('moon-surface.jpeg'); /* 画像のパスに適切なものを指定 */
+		    background-size: cover;
+		    background-attachment: fixed; /* 画像を固定するためのプロパティ */
+		    font-family: Arial, sans-serif;
+		    color: white;
+		    text-align: center;
+		    margin: 0; /* マージンを0に設定して、デフォルトのボディマージンを取り除く */
+		    overflow: hidden; /* スクロールバーを非表示にする */
+		}
         .question-box {
             width: 30%;
             padding: 30px;
@@ -39,6 +37,7 @@
         border:1px solid gray;
         width:75%;
         padding:20px;}
+        
       
         .modal {
             display: none;
@@ -76,14 +75,18 @@
     .go-earth{
     top:70%;
     right:40px;
-    width:100px; 
     position: fixed;
     height:70px;
     text-align: center; 
     border-radius: 50%;
     margin:0px auto 0px auto;
     padding-top: 15px;
-    font-weight:bolder;
+   
+    }
+    
+    .go-earth a{
+     font-weight:bolder;
+     
     }
     
     h6{
@@ -97,53 +100,53 @@
     }
     
     h6:hover{
-transform: scale(1.2);
-color: rgb(193, 193, 149); 
-
-}
-
-h6 ion-icon{
- cursor: pointer; font-size:50px; padding:0px;
- }
- 
- h6 ion-icon:hover{
-	 cursor: pointer;
- }
-        
-.TextTyping {
-  text-align: center;
-  color: rgb(209, 212, 159);
-  white-space: pre-line; 
-	margin: 20px 0;
-	font-size: 1.5rem;
-	letter-spacing: .5em;
-	word-break: break-all;
-	line-height: 50px;
-	font-size: 18px;
-	font-weight:bolder;
-}
-
-/*文字列後ろの線の設定*/
-.TextTyping::after {
-    content: "★";
-    animation: typinganime .8s ease infinite;
-}
-
-@keyframes typinganime {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.top-hover:hover{
-border: 1px solid rgb(179, 161, 187);
-color: rgb(179, 161, 187);
-}
-
-.radio-hover:hover{
-border:none;
-}
+	transform: scale(1.2);
+	color: rgb(193, 193, 149); 
+	
+	}
+	
+	h6 ion-icon{
+	 cursor: pointer; font-size:50px; padding:0px;
+	 }
+	 
+	 h6 ion-icon:hover{
+		 cursor: pointer;
+	 }
+	        
+	.TextTyping {
+	  text-align: center;
+	  color: rgb(209, 212, 159);
+	  white-space: pre-line; 
+		margin: 20px 0;
+		font-size: 1.5rem;
+		letter-spacing: .5em;
+		word-break: break-all;
+		line-height: 50px;
+		font-size: 18px;
+		font-weight:bolder;
+	}
+	
+	/*文字列後ろの線の設定*/
+	.TextTyping::after {
+	    content: "★";
+	    animation: typinganime .8s ease infinite;
+	}
+	
+	@keyframes typinganime {
+	    from {
+	        opacity: 0;
+	    }
+	
+	    to {
+	        opacity: 1;
+	    }
+	}
+	
+	.top-hover:hover{
+	border: 1px solid rgb(179, 161, 187);
+	color: rgb(179, 161, 187);
+	}
+	
+	.radio-hover:hover{
+	border:none;
+	}

@@ -449,7 +449,6 @@ function winGame() {
   }
 }
 
-
     document.addEventListener("DOMContentLoaded", function () {
 // ページが読み込まれたらローディング画面を非表示に
 setTimeout(function () {
@@ -459,4 +458,6 @@ setTimeout(function () {
 
 // ここに背景画像への切り替えなどの処理を追加
 });
+
+
 

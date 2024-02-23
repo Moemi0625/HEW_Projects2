@@ -29,9 +29,9 @@
     <ion-icon name="radio-outline" onclick="readText()"></ion-icon></h6>
 
 <!-- 地球に行くボタン -->
-<a href="top.html" onclick="addBlackScreen()" class="btn-top go-earth top-hover">
-<ion-icon name="rocket-outline" style="font-size: 30px; cursor: pointer;">
-</ion-icon><br>地球に行く</a>
+<a href="top.html" onclick="addBlackScreen()" class="btn-top go-earth top-hover" style="width:150px; height:80px;">
+<ion-icon name="rocket-outline" style="font-size: 40px; cursor: pointer; font-weight:bolder;">
+</ion-icon><br>地球へ向かう</a>
 
 <!-- モーダル診断コンテンツ -->
 	<div id="alienCheckModal" class="modal">
@@ -91,12 +91,14 @@
     <div class="hero">
      
       <div id="textToRead">
-        <p class="TextTyping">今回、我々の使命は地球生命体〖人間〗を調査することにある。
+        <p class="TextTyping">今回、我々は地球生命体〖人間〗を調査する。
           その調査対象の人間の名は...
-          ”アカホリ・モエミ”</p>
+         〖アカホリ・モエミ〗</p>
           
-         <p style="display: none;">、、アイアイサー!、、。
-			 よし、では彼女の調査報告書を地球で入手し、それを解読するように。
+         <p style="display: none;">あのお、それは一体誰ですか？
+         	それを今から調査するのです。
+			ではさっそく、最初の任務を与えます。彼女の調査報告書を地球で入手し、それを解読しなさい。
+			 あ、ｱｲｱｲｻｰ。
 		</p>
   
     </div>

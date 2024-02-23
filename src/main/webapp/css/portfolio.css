@@ -347,6 +347,7 @@ font-size: 25px;
 color: rgb(209, 212, 159);
 border:none;
 cursor: pointer;
+
 }
 
 .home{
@@ -726,7 +727,7 @@ margin: 0px auto 0px auto;
 }
 
 .btn-top{
-display: inline-block; /* inline-blockに変更 */
+display: inline-block;
 position: fixed;
 left: 40px;
 top:40px;

@@ -44,7 +44,7 @@
             <img src="<%= selectedImage %>" alt="宇宙人画像">
         </div>
         <div class="result-box">
-            <h1>宇宙人診断結果</h1>
+            <h1>診断結果</h1>
            <h2><ion-icon name="radio-outline" onclick="readText()" style =" cursor: pointer;"></ion-icon></h2>
 			  <div id="textToRead">
 			  <p style="font-weight:bolder; font-size:25px;">任務適性レベル: ${level}</p>
@@ -62,7 +62,8 @@
         var textToRead = document.getElementById('textToRead').innerText;
         var utterance = new SpeechSynthesisUtterance(textToRead);
         speechSynthesis.speak(utterance);
-      }</script>
+      }
+    </script>
       
       <script
 type="module"
@@ -72,6 +73,6 @@ src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
 nomodule
 src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
 ></script>
-    <a href="top.html" class="btn-top">使命を果たしに地球へ向かう</a>
+    <a href="top.html" class="btn-top">地球へ向かう</a>
 </body>
 </html>

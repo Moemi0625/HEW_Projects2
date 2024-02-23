@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
  body {
-    background-image: url('./images/moon-surface.jpg');
+    background-image: url('../images/moon-surface.jpg');
     background-size: cover;
     font-family: Arial, sans-serif;
     color: white;
@@ -25,8 +25,9 @@
 }
 
 .image-container img{
-width:450px;
-height:50%;}
+	width:450px;
+	height:50%;
+}
 
 .result-box {
     background: rgba(0, 0, 0, 0.5);
@@ -37,7 +38,6 @@ height:50%;}
     width: 40%;
     border: 1px solid white;
     margin-right:10%;
-    
 }
 
 .result-box h1 {
@@ -50,13 +50,13 @@ height:50%;}
 }
 
 h2{
-font-size:60px;
-margin:-30px auto;
-border: none;
-transition: transform 0.3s;
+	font-size:60px;
+	margin:-30px auto;
+	border: none;
+	transition: transform 0.3s;
 }
 
 h2:hover{
-transform: scale(1.2);
-color: rgb(193, 193, 149); 
+	transform: scale(1.2);
+	color: rgb(193, 193, 149); 
 }

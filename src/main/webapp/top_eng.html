@@ -13,6 +13,9 @@
 	<link rel="icon" href="favicon.ico">
 	<link rel="icon" sizes="200x200" href="./images/favicon.png">
 	 <style>
+	 body{
+	 overflow: hidden;
+	 }
 	   #mission-box{
 	   background: none; border: none; 
 	   }
@@ -31,6 +34,10 @@
 		  padding-bottom:5px; 
 		  margin-bottom:10px;
 	  }
+	  
+	  #mission-box a{
+	  pointer-events: none; padding-top:40px;
+	  }
   </style>
 </head>
 
@@ -38,40 +45,33 @@
         
   <div class="loader-wrapper"></div>
 
-	 <h3 style="margin-top: 35px; font-size: 25px; color: white;">翻訳・解読を目指そう</h3>
+	 <h3 style="margin-top: 35px; font-size: 25px; color: white;">Congrats On Your Translation</h3>
 	
 	  <h1 style="margin-top: -25px;">Investigation Report '23</h1>
-	  <a class="btn-top" href="alienCheck.jsp" style="display: flex;">宇宙に戻る</a>
+	  <a class="btn-top" href="top.html" style="display: flex;">Back To Original</a>
 	    
-	  <div id="translationBanner" style="display:none; position: fixed; top: 0; right: 0; border:1px solid white; padding: 10px;">
-	  翻訳が完了しました。<button class="btn">リセット</button>
-	</div>
-
   <section class="overlay" style="z-index: 10;">
       <div class="home">
-       <h4 style="margin-bottom:-80px; margin-left:30px;">アカホリ・モエミ</h4><br><br>
+       <h4 style="margin-bottom:-80px; margin-left:30px;">MOEMI AKAHORI</h4>
         <div class="home-main">
        
-          <h2 style="margin-right: 180px; width:100%;">調査報告書 '23</h2>
+          <h2 style="margin-right: 180px; width:100%;">REPORT '23</h2>
          
-          <h1 class="bounce" id="mission-nav">Mission Game</h1>
-          <h1 class="bounce"><ion-icon name="play-forward-outline"></ion-icon></h1>
 	      <button id="mission-box">
-	      		<a href="game/game.html" class="btn mission-btn">
-			  	<ion-icon name="rocket-outline" class="mission-roket">
-		  		</ion-icon><br>言語設定の変更</a>
+	      		<a class="btn mission-btn">
+			ENGLISH<br>( AUSTRALIA )</a>
 		  </button>
   </div>
   
         <nav>
-         <h3 style="margin:-50px 30px 10px;">目次</h3>
+         <h3 style="margin:-50px 30px 10px;">TABLE OF CONTENTS</h3>
           <ul>
-              <li><a href="about.html">About Me
-				  <p class="home-navnav">プロフィール</p></a></li>
-              <li><a href="projects.html">Projects 
-				  <p class="home-navnav">最近制作したモノ</p></a></li>
-              <li><a href="contact.html">Contact
-				  <p class="home-navnav">繋がろう！</p></a></li>
+              <li><a href="about_eng.html">About Me
+				  <p class="home-navnav">My Background</p></a></li>
+              <li><a href="projects_eng.html">Projects 
+				  <p class="home-navnav">What I Made</p></a></li>
+              <li><a href="contact_eng.html">Contact
+				  <p class="home-navnav">Let's Connect!</p></a></li>
           </ul>
       </nav>
   </div>
@@ -82,8 +82,6 @@
 <footer>
     <p>&copy; 2023 Moemi</p>
 </footer>
-
-<button onclick="scrollToTop()" class="back-to-top">Back to Top</button>
 
 </body>
 </html>
