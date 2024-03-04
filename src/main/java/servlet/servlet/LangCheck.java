@@ -2,25 +2,25 @@ package servlet.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class LangCheck {
-    public void redirectToLanguagePage(String basePage, String languageSuffix, HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String languagePage = determineLanguagePage(basePage, languageSuffix, request.getParameter("language"));
+@WebServlet("/translate")
+public class LangCheck extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String language = request.getParameter("language");
 
-        if (isValidLanguagePage(languagePage)) {
-            response.sendRedirect(languagePage);
-        } else {
-            response.sendRedirect("/error.html");
+        // ボタン以外のアクセスの場合はエラーページにリダイレクト
+        if (language == null || !(language.equals("jp") || language.equals("ko") || language.equals("fil") || language.equals("eng"))) {
+            response.sendRedirect("/HEW2/error.html");
+            return;
         }
-    }
 
-    private String determineLanguagePage(String basePage, String languageSuffix, String language) {
-        return basePage.replace("_jp", languageSuffix).replace("_ko", languageSuffix).replace("_fil", languageSuffix).replace("_eng", languageSuffix);
-    }
-
-    private boolean isValidLanguagePage(String page) {
-        return page != null && !page.isEmpty();
+        // ボタンがクリックされた場合、対応するページにリダイレクト
+        response.sendRedirect("top_" + language + ".html");
     }
 }

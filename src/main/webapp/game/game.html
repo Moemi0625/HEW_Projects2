@@ -161,10 +161,21 @@
         <p>OR</p>
         
    	<!-- 翻訳ボタン -->
-	<button id="japaneseBtn" class="btn">日本語に<br>翻訳する</button>
-	<button id="koreanBtn" class="btn">韓国語に<br>翻訳する</button>
-	<button id="tagalogBtn" class="btn">タガログ語に<br>翻訳する</button>
-	<button id="englishBtn" class="btn">英語に<br>翻訳する</button>
+<button type="button" class="btn" onclick=" gototranslatedpage('jp')">日本語に<br>翻訳する</button>
+<button type="button" class="btn" onclick=" gototranslatedpage('ko')">韓国語に<br>翻訳する</button>
+<button type="button" class="btn" onclick=" gototranslatedpage('fil')">タガログ語に<br>翻訳する</button>
+<button type="button" class="btn" onclick=" gototranslatedpage('eng')">英語に<br>翻訳する</button>
+
+
+<script>
+function gototranslatedpage(language) {
+    console.log("Clicked");
+    // 絶対パスを使用してサーブレットにリクエストを送信
+    window.location.href = "/HEW2/translate?language=" + language;
+}
+</script>
+
+
 
    	</div>
    </div>
@@ -178,7 +189,6 @@
    
   <script src="game.js"></script>
  
-  
 <footer>
     <p>&copy; 2023 Moemi</p>
 </footer>
